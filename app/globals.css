@@ -1,26 +1,154 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Navy base (deck dark sections) */
+  --color-navy-950: #050c17;
+  --color-navy-900: #0a1424;
+  --color-navy-850: #0c1a2d;
+  --color-navy-800: #102338;
+  --color-navy-700: #173050;
+  --color-navy-600: #21406a;
+
+  /* Brand accents */
+  --color-brand: #1fd3e8;
+  --color-brand-2: #2dd4bf;
+  --color-brand-soft: #67e8f9;
+  --color-blue: #3b82f6;
+  --color-purple: #7c6ff0;
+  --color-green: #34d399;
+  --color-orange: #f97316;
+  --color-orange-soft: #fb923c;
+
+  /* Neutrals for light sections */
+  --color-ink: #0b1424;
+  --color-ink-soft: #475569;
+  --color-mist: #f4f7fc;
+
+  --font-sans: var(--font-pretendard), ui-sans-serif, system-ui, -apple-system,
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+
+  --shadow-card: 0 18px 50px -22px rgba(8, 20, 40, 0.22);
+  --shadow-soft: 0 10px 30px -16px rgba(8, 20, 40, 0.18);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 76px;
+  }
+  body {
+    background-color: var(--color-navy-900);
+    color: #e7eef7;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    word-break: keep-all;
+  }
+  ::selection {
+    background: rgba(31, 211, 232, 0.28);
+    color: #fff;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ---- Decorative background patterns ---- */
+.bg-dotgrid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.bg-dotgrid-ink {
+  background-image: radial-gradient(rgba(13, 28, 51, 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.bg-diagonal {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.03) 0 1px,
+    transparent 1px 15px
+  );
+}
+.bg-diagonal-ink {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(13, 28, 51, 0.04) 0 1px,
+    transparent 1px 15px
+  );
+}
+
+/* ---- Gradient text ---- */
+.text-gradient {
+  background: linear-gradient(90deg, var(--color-brand), var(--color-brand-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---- Scroll reveal ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal[data-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---- Floating chips (hero) ---- */
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.animate-floaty {
+  animation: floaty 6s ease-in-out infinite;
+}
+.animate-floaty-slow {
+  animation: floaty 9s ease-in-out infinite;
+}
+
+/* ---- Marquee (partners / outlets) ---- */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 38s linear infinite;
+}
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none;
+  }
+  .animate-floaty,
+  .animate-floaty-slow,
+  .animate-marquee {
+    animation: none;
+  }
 }
