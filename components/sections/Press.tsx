@@ -39,7 +39,7 @@ export function Press() {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex h-full flex-col rounded-md border border-ink/10 bg-white p-5 shadow-soft transition hover:-translate-y-1 hover:border-brand/30 hover:shadow-card"
+                className="hair hair-ink relative group flex h-full flex-col rounded-md border border-ink/10 bg-white p-5 shadow-soft transition hover:-translate-y-1 hover:border-brand/30 hover:shadow-card"
               >
                 <div className="flex items-center justify-between">
                   <span

@@ -6,7 +6,7 @@ import { cmo, advisors, type Advisor } from "@/lib/content";
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <div className="mb-1 text-[11px] font-bold tracking-wider text-ink/40 uppercase">
+      <div className="mb-1 text-[11px] font-bold tracking-wider text-ink/40 font-mono uppercase">
         {label}
       </div>
       {children}
@@ -16,7 +16,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 
 function AdvisorCard({ a }: { a: Advisor }) {
   return (
-    <div className="group relative h-full overflow-hidden rounded-md border border-ink/10 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+    <div className="hair hair-ink group relative h-full overflow-hidden rounded-md border border-ink/10 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
       <div className="flex items-start justify-between gap-3">
         <div>
           <div className="flex flex-wrap items-center gap-2">
@@ -99,13 +99,13 @@ export function Leadership() {
         />
 
         <Reveal>
-          <div className="relative mt-10 overflow-hidden rounded-md border border-orange/20 bg-linear-to-br from-white to-orange/5 p-7 shadow-soft sm:p-9">
+          <div className="hair hair-ink relative mt-10 overflow-hidden rounded-md border border-orange/20 bg-linear-to-br from-white to-orange/5 p-7 shadow-soft sm:p-9">
             <div className="pointer-events-none absolute -top-12 -right-12 h-40 w-40 rounded-full bg-orange/10 blur-2xl" />
             <div className="relative grid grid-cols-1 gap-7 lg:grid-cols-[0.9fr_1.1fr]">
               <div>
                 <div className="flex items-center gap-2 text-orange">
                   <span className="h-2 w-2 rounded-full bg-orange" />
-                  <span className="text-xs font-bold tracking-[0.2em] uppercase">
+                  <span className="text-xs font-bold tracking-[0.2em] font-mono uppercase">
                     Executive Board
                   </span>
                 </div>
@@ -133,7 +133,7 @@ export function Leadership() {
                 </div>
               </div>
               <div className="rounded-md bg-white/70 p-5 ring-1 ring-ink/5">
-                <div className="text-[11px] font-bold tracking-wider text-ink/40 uppercase">
+                <div className="text-[11px] font-bold tracking-wider text-ink/40 font-mono uppercase">
                   담당 업무 (Responsibilities)
                 </div>
                 <ul className="mt-3 space-y-3">
@@ -155,7 +155,7 @@ export function Leadership() {
         <Reveal>
           <div className="mt-12 flex items-center gap-2 text-orange">
             <span className="h-2 w-2 rounded-full bg-orange" />
-            <span className="text-xs font-bold tracking-[0.2em] uppercase">
+            <span className="text-xs font-bold tracking-[0.2em] font-mono uppercase">
               Advisory Board
             </span>
             <span className="ml-1 text-sm font-semibold text-ink">

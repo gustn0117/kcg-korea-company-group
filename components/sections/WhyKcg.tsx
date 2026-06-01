@@ -7,7 +7,7 @@ import { accentBar, accentTint } from "@/lib/accents";
 export function WhyKcg() {
   return (
     <section id="why" className="relative bg-mist py-20 sm:py-28">
-      <div className="absolute inset-0 bg-dotgrid-ink opacity-70" />
+      <div className="absolute inset-0 bg-grid-ink opacity-70" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           index="03"
@@ -19,7 +19,7 @@ export function WhyKcg() {
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
           {whyKcg.map((w, i) => (
             <Reveal key={w.no} delay={i * 90}>
-              <div className="group relative h-full overflow-hidden rounded-md border border-ink/10 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+              <div className="hair hair-ink group relative h-full overflow-hidden rounded-md border border-ink/10 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
                 <div
                   className={`absolute inset-x-0 top-0 h-1 ${accentBar[w.accent]}`}
                 />

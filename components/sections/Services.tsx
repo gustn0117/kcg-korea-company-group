@@ -10,7 +10,7 @@ export function Services() {
       id="services"
       className="relative overflow-hidden bg-navy-900 py-20 sm:py-28"
     >
-      <div className="absolute inset-0 bg-dotgrid opacity-30" />
+      <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="pointer-events-none absolute top-1/4 -right-32 h-96 w-96 rounded-full bg-brand/5 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
@@ -25,7 +25,7 @@ export function Services() {
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
           {services.map((s, i) => (
             <Reveal key={s.title} delay={i * 110}>
-              <div className="group relative h-full overflow-hidden rounded-md border border-white/10 bg-navy-800/60 p-7 transition duration-300 hover:-translate-y-1.5 hover:border-white/20 hover:bg-navy-800">
+              <div className="hair group relative h-full overflow-hidden rounded-md border border-white/10 bg-navy-800/60 p-7 transition duration-300 hover:-translate-y-1.5 hover:border-white/20 hover:bg-navy-800">
                 <div
                   className={`absolute inset-x-0 top-0 h-1 ${accentBar[s.accent]}`}
                 />

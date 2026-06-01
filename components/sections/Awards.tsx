@@ -9,7 +9,7 @@ export function Awards() {
       id="awards"
       className="relative overflow-hidden bg-navy-950 py-20 sm:py-28"
     >
-      <div className="absolute inset-0 bg-dotgrid opacity-25" />
+      <div className="absolute inset-0 bg-grid opacity-25" />
       <div className="pointer-events-none absolute top-0 right-0 h-[30rem] w-[30rem] rounded-full bg-orange/10 blur-[140px]" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
@@ -50,12 +50,12 @@ export function Awards() {
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="sticky top-24 overflow-hidden rounded-lg border border-orange/30 bg-linear-to-br from-navy-900 to-navy-850 p-8">
+            <div className="hair sticky top-24 overflow-hidden rounded-lg border border-orange/30 bg-linear-to-br from-navy-900 to-navy-850 p-8">
               <div className="pointer-events-none absolute -top-10 -right-10 h-40 w-40 rounded-full bg-orange/15 blur-2xl" />
               <div className="relative">
                 <div className="flex items-center gap-2 text-white/50">
                   <Icon name="trophy" className="h-4 w-4 text-orange" />
-                  <span className="text-xs font-bold tracking-[0.2em] uppercase">
+                  <span className="text-xs font-bold tracking-[0.2em] font-mono uppercase">
                     National Assembly
                   </span>
                 </div>

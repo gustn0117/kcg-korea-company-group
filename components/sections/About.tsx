@@ -25,7 +25,7 @@ export function About() {
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 90}>
-              <div className="group h-full rounded-md border border-ink/10 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+              <div className="hair hair-ink relative group h-full rounded-md border border-ink/10 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
                 <div className="flex items-start justify-between">
                   <div className="text-4xl font-black tracking-tight text-ink sm:text-5xl">
                     {s.kind === "static" ? (
@@ -38,7 +38,7 @@ export function About() {
                     <Icon name={s.icon} className="h-5 w-5" />
                   </span>
                 </div>
-                <div className="mt-3 text-sm font-bold tracking-[0.15em] text-ink/70">
+                <div className="mt-3 font-mono text-[11px] font-medium tracking-[0.15em] text-ink/60">
                   {s.label}
                 </div>
                 <div className="text-sm text-ink-soft">{s.sub}</div>
@@ -73,14 +73,14 @@ export function About() {
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="text-xs font-semibold uppercase tracking-[0.2em] text-ink-soft">
+            <div className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-ink-soft">
               Core Values
             </div>
             <div className="mt-3 space-y-3">
               {coreValues.map((v) => (
                 <div
                   key={v.title}
-                  className="flex items-center gap-4 rounded-md border border-ink/10 bg-white p-4 shadow-soft"
+                  className="hair hair-ink relative flex items-center gap-4 rounded-md border border-ink/10 bg-white p-4 shadow-soft"
                 >
                   <span
                     className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-md ${accentTint[v.accent]}`}

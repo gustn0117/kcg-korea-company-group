@@ -8,7 +8,7 @@ export function Contact() {
       id="contact"
       className="relative overflow-hidden bg-navy-950 py-24 sm:py-32"
     >
-      <div className="absolute inset-0 bg-dotgrid opacity-25" />
+      <div className="absolute inset-0 bg-grid opacity-25" />
       <div className="pointer-events-none absolute top-1/2 left-1/2 h-[40rem] w-[40rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand/10 blur-[150px]" />
 
       <div className="relative mx-auto max-w-3xl px-5 text-center sm:px-8">
@@ -33,7 +33,7 @@ export function Contact() {
           <div className="mx-auto mt-9 flex max-w-xl flex-col gap-3 sm:flex-row">
             <a
               href={`mailto:${company.email}`}
-              className="group flex flex-1 items-center justify-center gap-3 rounded-md border border-white/10 bg-white/5 px-5 py-4 transition hover:border-brand/40 hover:bg-white/10"
+              className="hair group relative flex flex-1 items-center justify-center gap-3 rounded-md border border-white/10 bg-white/5 px-5 py-4 transition hover:border-brand/40 hover:bg-white/10"
             >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-brand text-navy-950">
                 <Icon name="mail" className="h-5 w-5" />
@@ -45,7 +45,7 @@ export function Contact() {
             </a>
             <a
               href={`tel:${company.phone.replace(/-/g, "")}`}
-              className="group flex flex-1 items-center justify-center gap-3 rounded-md border border-white/10 bg-white/5 px-5 py-4 transition hover:border-brand/40 hover:bg-white/10"
+              className="hair group relative flex flex-1 items-center justify-center gap-3 rounded-md border border-white/10 bg-white/5 px-5 py-4 transition hover:border-brand/40 hover:bg-white/10"
             >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-brand text-navy-950">
                 <Icon name="phone" className="h-5 w-5" />

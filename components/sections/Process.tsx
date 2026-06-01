@@ -9,7 +9,7 @@ export function Process() {
       id="process"
       className="relative overflow-hidden bg-navy-900 py-20 sm:py-28"
     >
-      <div className="absolute inset-0 bg-dotgrid opacity-30" />
+      <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           dark
@@ -22,7 +22,7 @@ export function Process() {
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-4">
           {processSteps.map((s, i) => (
             <Reveal key={s.step} delay={i * 100}>
-              <div className="group relative h-full rounded-md border border-white/10 bg-navy-800/60 p-6 text-center transition hover:-translate-y-1.5 hover:border-brand/30 hover:bg-navy-800">
+              <div className="hair group relative h-full rounded-md border border-white/10 bg-navy-800/60 p-6 text-center transition hover:-translate-y-1.5 hover:border-brand/30 hover:bg-navy-800">
                 <div className="text-xs font-bold tracking-[0.2em] text-brand">
                   {s.step}
                 </div>
@@ -45,7 +45,7 @@ export function Process() {
         </div>
 
         <Reveal>
-          <div className="mt-10 flex flex-col items-center justify-between gap-5 overflow-hidden rounded-lg border border-white/10 bg-linear-to-r from-navy-800 to-navy-850 p-8 sm:flex-row sm:p-10">
+          <div className="hair relative mt-10 flex flex-col items-center justify-between gap-5 overflow-hidden rounded-lg border border-white/10 bg-linear-to-r from-navy-800 to-navy-850 p-8 sm:flex-row sm:p-10">
             <div>
               <h3 className="text-2xl font-extrabold text-white">
                 KCG와 함께, 지금 시작하세요.
@@ -56,7 +56,7 @@ export function Process() {
             </div>
             <a
               href="#contact"
-              className="inline-flex shrink-0 items-center gap-2 rounded-md bg-brand px-7 py-3.5 text-sm font-bold text-navy-950 shadow-[0_12px_40px_-10px_rgba(84,131,200,0.8)] transition hover:bg-brand-soft"
+              className="btn-sheen inline-flex shrink-0 items-center gap-2 rounded-md bg-brand px-7 py-3.5 text-sm font-bold text-navy-950 shadow-[0_12px_40px_-10px_rgba(84,131,200,0.8)] transition hover:bg-brand-soft"
             >
               제안 문의하기 <Icon name="arrow-right" className="h-4 w-4" />
             </a>

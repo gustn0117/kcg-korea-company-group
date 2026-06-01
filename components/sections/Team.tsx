@@ -18,7 +18,7 @@ export function Team() {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {teams.map((t, i) => (
               <Reveal key={t.name} delay={i * 80}>
-                <div className="group h-full rounded-md border border-ink/10 bg-mist p-6 transition hover:-translate-y-1 hover:bg-white hover:shadow-card">
+                <div className="hair hair-ink relative group h-full rounded-md border border-ink/10 bg-mist p-6 transition hover:-translate-y-1 hover:bg-white hover:shadow-card">
                   <span className="flex h-12 w-12 items-center justify-center rounded-md bg-brand/10 text-brand">
                     <Icon name={t.icon} className="h-6 w-6" />
                   </span>
@@ -32,13 +32,13 @@ export function Team() {
           </div>
 
           <Reveal delay={120}>
-            <div className="relative h-full overflow-hidden rounded-md bg-navy-900 p-7">
-              <div className="absolute inset-0 bg-dotgrid opacity-30" />
+            <div className="hair relative h-full overflow-hidden rounded-md bg-navy-900 p-7">
+              <div className="absolute inset-0 bg-grid opacity-30" />
               <div className="pointer-events-none absolute -right-16 -bottom-16 h-48 w-48 rounded-full bg-brand/10 blur-3xl" />
               <div className="relative">
                 <div className="flex items-center gap-2 text-brand">
                   <Icon name="zap" className="h-5 w-5" />
-                  <span className="text-xs font-semibold tracking-[0.2em] uppercase">
+                  <span className="text-xs font-semibold tracking-[0.2em] font-mono uppercase">
                     KCG Way
                   </span>
                 </div>

@@ -31,7 +31,7 @@ export function Footer() {
               {["instagram", "facebook", "youtube"].map((s) => (
                 <span
                   key={s}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white/50"
+                  className="hair relative flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white/50"
                   aria-label={s}
                 >
                   <Icon name={s} className="h-4 w-4" />
@@ -41,7 +41,7 @@ export function Footer() {
           </div>
 
           <div>
-            <div className="text-xs font-semibold tracking-[0.2em] text-brand uppercase">
+            <div className="text-xs font-semibold tracking-[0.2em] text-brand font-mono uppercase">
               Business Info
             </div>
             <dl className="mt-4 space-y-2.5 text-sm">

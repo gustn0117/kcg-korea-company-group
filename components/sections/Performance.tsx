@@ -23,7 +23,7 @@ export function Performance() {
         />
 
         <Reveal>
-          <div className="mt-10 grid grid-cols-1 gap-2 rounded-lg border border-white/10 bg-navy-800/50 p-2 sm:grid-cols-3">
+          <div className="hair relative mt-10 grid grid-cols-1 gap-2 rounded-lg border border-white/10 bg-navy-800/50 p-2 sm:grid-cols-3">
             {performanceStats.map((s, i) => (
               <div key={s.label} className="relative px-6 py-8 text-center">
                 {i > 0 && (
@@ -54,7 +54,7 @@ export function Performance() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {industries.map((it, i) => (
             <Reveal key={it.title} delay={(i % 4) * 80}>
-              <div className="group flex h-full items-center gap-4 rounded-md border border-white/10 bg-navy-800/50 p-5 transition hover:-translate-y-1 hover:border-brand/30 hover:bg-navy-800">
+              <div className="hair group relative flex h-full items-center gap-4 rounded-md border border-white/10 bg-navy-800/50 p-5 transition hover:-translate-y-1 hover:border-brand/30 hover:bg-navy-800">
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-white/5 text-brand transition group-hover:bg-brand/15">
                   <Icon name={it.icon} className="h-6 w-6" />
                 </span>

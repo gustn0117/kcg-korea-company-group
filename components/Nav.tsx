@@ -59,9 +59,10 @@ export function Nav() {
               <a
                 key={l.id}
                 href={`#${l.id}`}
-                className={`rounded-md px-3.5 py-2 text-sm font-medium transition ${
+                data-active={active === l.id}
+                className={`nav-underline rounded-md px-3.5 py-2 text-sm font-medium transition ${
                   active === l.id
-                    ? "text-brand"
+                    ? "text-brand-soft"
                     : "text-white/70 hover:text-white"
                 }`}
               >
@@ -73,7 +74,7 @@ export function Nav() {
           <div className="flex items-center gap-2">
             <a
               href="#contact"
-              className="hidden items-center gap-1.5 rounded-md bg-brand px-4 py-2 text-sm font-bold text-navy-950 shadow-[0_0_24px_-6px_rgba(84,131,200,0.7)] transition hover:bg-brand-soft sm:inline-flex"
+              className="btn-sheen hidden items-center gap-1.5 rounded-md bg-brand px-4 py-2 text-sm font-bold text-navy-950 shadow-[0_0_24px_-6px_rgba(84,131,200,0.7)] transition hover:bg-brand-soft sm:inline-flex"
             >
               제안 문의
               <Icon name="arrow-right" className="h-4 w-4" />
