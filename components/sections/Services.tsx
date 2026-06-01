@@ -25,12 +25,12 @@ export function Services() {
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
           {services.map((s, i) => (
             <Reveal key={s.title} delay={i * 110}>
-              <div className="group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-navy-800/60 p-7 transition duration-300 hover:-translate-y-1.5 hover:border-white/20 hover:bg-navy-800">
+              <div className="group relative h-full overflow-hidden rounded-md border border-white/10 bg-navy-800/60 p-7 transition duration-300 hover:-translate-y-1.5 hover:border-white/20 hover:bg-navy-800">
                 <div
                   className={`absolute inset-x-0 top-0 h-1 ${accentBar[s.accent]}`}
                 />
                 <span
-                  className={`flex h-14 w-14 items-center justify-center rounded-2xl ${accentTint[s.accent]}`}
+                  className={`flex h-14 w-14 items-center justify-center rounded-md ${accentTint[s.accent]}`}
                 >
                   <Icon name={s.icon} className="h-7 w-7" />
                 </span>

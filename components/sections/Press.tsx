@@ -23,7 +23,7 @@ export function Press() {
               {[...pressOutlets, ...pressOutlets].map((o, i) => (
                 <span
                   key={i}
-                  className="whitespace-nowrap rounded-full border border-ink/10 bg-white px-5 py-2 text-sm font-bold text-ink/60"
+                  className="whitespace-nowrap rounded-md border border-ink/10 bg-white px-5 py-2 text-sm font-bold text-ink/60"
                 >
                   {o}
                 </span>
@@ -39,11 +39,11 @@ export function Press() {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-5 shadow-soft transition hover:-translate-y-1 hover:border-brand/30 hover:shadow-card"
+                className="group flex h-full flex-col rounded-md border border-ink/10 bg-white p-5 shadow-soft transition hover:-translate-y-1 hover:border-brand/30 hover:shadow-card"
               >
                 <div className="flex items-center justify-between">
                   <span
-                    className={`rounded-full px-2.5 py-1 text-xs font-bold ${
+                    className={`rounded-md px-2.5 py-1 text-xs font-bold ${
                       item.category === "advisory"
                         ? "bg-orange/10 text-orange"
                         : "bg-brand/10 text-brand"

@@ -1,36 +1,13 @@
-// Literal class maps so Tailwind v4 can statically detect every utility.
-export const accentText: Record<string, string> = {
-  brand: "text-brand",
-  "brand-2": "text-brand-2",
-  blue: "text-blue",
-  purple: "text-purple",
-  green: "text-green",
-  orange: "text-orange",
-};
+// Monochrome navy system — every accent key resolves to the same steel-blue.
+// Kept as a keyed map so existing call sites (accent="brand-2" etc.) still work.
+// Literal utility strings remain present so Tailwind v4 can statically detect them:
+// text-brand bg-brand bg-brand/10
 
-export const accentBar: Record<string, string> = {
-  brand: "bg-brand",
-  "brand-2": "bg-brand-2",
-  blue: "bg-blue",
-  purple: "bg-purple",
-  green: "bg-green",
-  orange: "bg-orange",
-};
+const keys = ["brand", "brand-2", "blue", "purple", "green", "orange"] as const;
+const fill = (v: string) =>
+  Object.fromEntries(keys.map((k) => [k, v])) as Record<string, string>;
 
-export const accentTint: Record<string, string> = {
-  brand: "bg-brand/10 text-brand",
-  "brand-2": "bg-brand-2/10 text-brand-2",
-  blue: "bg-blue/10 text-blue",
-  purple: "bg-purple/10 text-purple",
-  green: "bg-green/10 text-green",
-  orange: "bg-orange/10 text-orange",
-};
-
-export const accentGlow: Record<string, string> = {
-  brand: "shadow-[0_0_34px_-10px_rgba(31,211,232,0.55)]",
-  "brand-2": "shadow-[0_0_34px_-10px_rgba(45,212,191,0.55)]",
-  blue: "shadow-[0_0_34px_-10px_rgba(59,130,246,0.55)]",
-  purple: "shadow-[0_0_34px_-10px_rgba(124,111,240,0.55)]",
-  green: "shadow-[0_0_34px_-10px_rgba(52,211,153,0.55)]",
-  orange: "shadow-[0_0_34px_-10px_rgba(249,115,22,0.55)]",
-};
+export const accentText = fill("text-brand");
+export const accentBar = fill("bg-brand");
+export const accentTint = fill("bg-brand/10 text-brand");
+export const accentGlow = fill("shadow-[0_0_34px_-12px_rgba(84,131,200,0.5)]");

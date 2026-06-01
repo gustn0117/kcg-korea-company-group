@@ -16,7 +16,7 @@ export function Partners() {
         <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
           {partners.map((p, i) => (
             <Reveal key={p} delay={(i % 6) * 50}>
-              <div className="flex h-20 items-center justify-center rounded-xl border border-ink/10 bg-mist px-3 text-center text-sm font-bold text-ink/65 transition hover:-translate-y-1 hover:border-brand/40 hover:bg-white hover:text-ink hover:shadow-card">
+              <div className="flex h-20 items-center justify-center rounded-md border border-ink/10 bg-mist px-3 text-center text-sm font-bold text-ink/65 transition hover:-translate-y-1 hover:border-brand/40 hover:bg-white hover:text-ink hover:shadow-card">
                 {p}
               </div>
             </Reveal>

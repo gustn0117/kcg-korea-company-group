@@ -19,7 +19,7 @@ function FloatChip({
   };
   return (
     <div
-      className={`absolute flex items-center gap-2.5 rounded-xl border border-white/10 bg-navy-800/80 px-3.5 py-2.5 shadow-xl backdrop-blur ${className}`}
+      className={`absolute flex items-center gap-2.5 rounded-md border border-white/10 bg-navy-800/80 px-3.5 py-2.5 shadow-xl backdrop-blur ${className}`}
     >
       <span
         className={`flex h-7 w-7 items-center justify-center rounded-lg bg-white/5 ${tones[tone]}`}
@@ -51,7 +51,7 @@ export function Hero() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr]">
         {/* left */}
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-semibold tracking-[0.18em] text-brand">
+          <div className="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-semibold tracking-[0.18em] text-brand">
             <Icon name="sparkles" className="h-3.5 w-3.5" />
             SINCE {company.since}
           </div>
@@ -65,7 +65,7 @@ export function Hero() {
           <p className="mt-2 text-2xl font-bold text-white/90 sm:text-3xl">
             {company.nameFull}
           </p>
-          <div className="mt-6 h-1 w-16 rounded-full bg-brand" />
+          <div className="mt-6 h-1 w-16 rounded-none bg-brand" />
 
           <p className="mt-7 text-lg leading-relaxed text-white/65 sm:text-xl">
             {company.tagline}
@@ -78,13 +78,13 @@ export function Hero() {
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-bold text-navy-950 shadow-[0_12px_40px_-10px_rgba(31,211,232,0.8)] transition hover:bg-brand-soft"
+              className="inline-flex items-center gap-2 rounded-md bg-brand px-6 py-3 text-sm font-bold text-navy-950 shadow-[0_12px_40px_-10px_rgba(84,131,200,0.8)] transition hover:bg-brand-soft"
             >
               제안 문의하기 <Icon name="arrow-right" className="h-4 w-4" />
             </a>
             <a
               href="#services"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-bold text-white transition hover:bg-white/10"
+              className="inline-flex items-center gap-2 rounded-md border border-white/20 px-6 py-3 text-sm font-bold text-white transition hover:bg-white/10"
             >
               서비스 살펴보기
             </a>
@@ -108,7 +108,7 @@ export function Hero() {
         <div className="relative hidden h-[26rem] lg:block">
           <div className="absolute top-1/2 left-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 bg-linear-to-br from-navy-700/60 to-navy-800/30 backdrop-blur-sm" />
           <div className="absolute top-1/2 left-1/2 h-44 w-44 -translate-x-1/2 -translate-y-1/2 rounded-full border border-brand/20" />
-          <div className="absolute top-1/2 left-1/2 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-2xl border border-brand/30 bg-navy-800/80 text-center shadow-[0_0_60px_-12px_rgba(31,211,232,0.6)] backdrop-blur">
+          <div className="absolute top-1/2 left-1/2 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-md border border-brand/30 bg-navy-800/80 text-center shadow-[0_0_60px_-12px_rgba(84,131,200,0.6)] backdrop-blur">
             <Icon name="line-chart" className="h-7 w-7 text-brand" />
             <span className="mt-1 text-xs font-bold tracking-widest text-white">
               GROWTH

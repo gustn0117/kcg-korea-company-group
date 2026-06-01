@@ -25,7 +25,7 @@ export function About() {
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 90}>
-              <div className="group h-full rounded-2xl border border-ink/10 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+              <div className="group h-full rounded-md border border-ink/10 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
                 <div className="flex items-start justify-between">
                   <div className="text-4xl font-black tracking-tight text-ink sm:text-5xl">
                     {s.kind === "static" ? (
@@ -34,7 +34,7 @@ export function About() {
                       <CountUp to={s.to} suffix={s.suffix} />
                     )}
                   </div>
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand/10 text-brand">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-md bg-brand/10 text-brand">
                     <Icon name={s.icon} className="h-5 w-5" />
                   </span>
                 </div>
@@ -64,7 +64,7 @@ export function About() {
               {aboutIntro.tags.map((t) => (
                 <span
                   key={t}
-                  className="rounded-full bg-ink/5 px-3 py-1.5 text-xs font-semibold text-ink-soft"
+                  className="rounded-md bg-ink/5 px-3 py-1.5 text-xs font-semibold text-ink-soft"
                 >
                   {t}
                 </span>
@@ -80,10 +80,10 @@ export function About() {
               {coreValues.map((v) => (
                 <div
                   key={v.title}
-                  className="flex items-center gap-4 rounded-xl border border-ink/10 bg-white p-4 shadow-soft"
+                  className="flex items-center gap-4 rounded-md border border-ink/10 bg-white p-4 shadow-soft"
                 >
                   <span
-                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${accentTint[v.accent]}`}
+                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-md ${accentTint[v.accent]}`}
                   >
                     <Icon name={v.icon} className="h-5 w-5" />
                   </span>

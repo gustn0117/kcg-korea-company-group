@@ -16,18 +16,18 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 
 function AdvisorCard({ a }: { a: Advisor }) {
   return (
-    <div className="group relative h-full overflow-hidden rounded-2xl border border-ink/10 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+    <div className="group relative h-full overflow-hidden rounded-md border border-ink/10 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
       <div className="flex items-start justify-between gap-3">
         <div>
           <div className="flex flex-wrap items-center gap-2">
             <h3 className="text-xl font-extrabold text-ink">{a.name}</h3>
-            <span className="rounded-full bg-orange/10 px-2.5 py-0.5 text-xs font-bold text-orange">
+            <span className="rounded-md bg-orange/10 px-2.5 py-0.5 text-xs font-bold text-orange">
               {a.role}
             </span>
           </div>
           <p className="mt-1 text-sm font-semibold text-orange/90">{a.en}</p>
         </div>
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange/10 text-orange">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-orange/10 text-orange">
           <Icon name={a.icon} className="h-5 w-5" />
         </span>
       </div>
@@ -76,7 +76,7 @@ function AdvisorCard({ a }: { a: Advisor }) {
         ))}
       </div>
 
-      <div className="mt-4 rounded-xl border-l-2 border-orange bg-orange/5 p-3.5">
+      <div className="mt-4 rounded-md border-l-2 border-orange bg-orange/5 p-3.5">
         <div className="flex items-center gap-1.5 text-[11px] font-bold text-orange">
           <Icon name="circle-check" className="h-3.5 w-3.5" />
           KCG에서의 역할
@@ -99,7 +99,7 @@ export function Leadership() {
         />
 
         <Reveal>
-          <div className="relative mt-10 overflow-hidden rounded-2xl border border-orange/20 bg-linear-to-br from-white to-orange/5 p-7 shadow-soft sm:p-9">
+          <div className="relative mt-10 overflow-hidden rounded-md border border-orange/20 bg-linear-to-br from-white to-orange/5 p-7 shadow-soft sm:p-9">
             <div className="pointer-events-none absolute -top-12 -right-12 h-40 w-40 rounded-full bg-orange/10 blur-2xl" />
             <div className="relative grid grid-cols-1 gap-7 lg:grid-cols-[0.9fr_1.1fr]">
               <div>
@@ -111,7 +111,7 @@ export function Leadership() {
                 </div>
                 <div className="mt-4 flex flex-wrap items-center gap-3">
                   <h3 className="text-3xl font-black text-ink">{cmo.name}</h3>
-                  <span className="rounded-full bg-orange/10 px-3 py-1 text-sm font-bold text-orange">
+                  <span className="rounded-md bg-orange/10 px-3 py-1 text-sm font-bold text-orange">
                     {cmo.role}
                   </span>
                 </div>
@@ -132,7 +132,7 @@ export function Leadership() {
                   ))}
                 </div>
               </div>
-              <div className="rounded-xl bg-white/70 p-5 ring-1 ring-ink/5">
+              <div className="rounded-md bg-white/70 p-5 ring-1 ring-ink/5">
                 <div className="text-[11px] font-bold tracking-wider text-ink/40 uppercase">
                   담당 업무 (Responsibilities)
                 </div>

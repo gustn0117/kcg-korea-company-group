@@ -50,7 +50,7 @@ export function Awards() {
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="sticky top-24 overflow-hidden rounded-3xl border border-orange/30 bg-linear-to-br from-navy-900 to-navy-850 p-8">
+            <div className="sticky top-24 overflow-hidden rounded-lg border border-orange/30 bg-linear-to-br from-navy-900 to-navy-850 p-8">
               <div className="pointer-events-none absolute -top-10 -right-10 h-40 w-40 rounded-full bg-orange/15 blur-2xl" />
               <div className="relative">
                 <div className="flex items-center gap-2 text-white/50">
@@ -71,7 +71,7 @@ export function Awards() {
                   {assemblyAwards.map((a) => (
                     <div
                       key={a.year}
-                      className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3"
+                      className="flex items-center gap-3 rounded-md bg-white/5 px-4 py-3"
                     >
                       <span className="text-sm font-extrabold text-orange">
                         {a.year}

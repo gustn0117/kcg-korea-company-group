@@ -19,7 +19,7 @@ export function WhyKcg() {
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
           {whyKcg.map((w, i) => (
             <Reveal key={w.no} delay={i * 90}>
-              <div className="group relative h-full overflow-hidden rounded-2xl border border-ink/10 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+              <div className="group relative h-full overflow-hidden rounded-md border border-ink/10 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
                 <div
                   className={`absolute inset-x-0 top-0 h-1 ${accentBar[w.accent]}`}
                 />
@@ -27,7 +27,7 @@ export function WhyKcg() {
                   {w.no}
                 </span>
                 <span
-                  className={`flex h-14 w-14 items-center justify-center rounded-2xl ${accentTint[w.accent]}`}
+                  className={`flex h-14 w-14 items-center justify-center rounded-md ${accentTint[w.accent]}`}
                 >
                   <Icon name={w.icon} className="h-7 w-7" />
                 </span>

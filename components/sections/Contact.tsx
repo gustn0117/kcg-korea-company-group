@@ -21,7 +21,7 @@ export function Contact() {
             <br />
             <span className="text-gradient">디지털 마케팅 파트너</span>
           </h2>
-          <div className="mx-auto mt-7 h-1 w-16 rounded-full bg-brand" />
+          <div className="mx-auto mt-7 h-1 w-16 rounded-none bg-brand" />
           <p className="mt-7 text-lg font-bold text-white">
             KCG 코리아컴퍼니그룹
           </p>
@@ -33,9 +33,9 @@ export function Contact() {
           <div className="mx-auto mt-9 flex max-w-xl flex-col gap-3 sm:flex-row">
             <a
               href={`mailto:${company.email}`}
-              className="group flex flex-1 items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition hover:border-brand/40 hover:bg-white/10"
+              className="group flex flex-1 items-center justify-center gap-3 rounded-md border border-white/10 bg-white/5 px-5 py-4 transition hover:border-brand/40 hover:bg-white/10"
             >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand text-navy-950">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-brand text-navy-950">
                 <Icon name="mail" className="h-5 w-5" />
               </span>
               <div className="text-left">
@@ -45,9 +45,9 @@ export function Contact() {
             </a>
             <a
               href={`tel:${company.phone.replace(/-/g, "")}`}
-              className="group flex flex-1 items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition hover:border-brand/40 hover:bg-white/10"
+              className="group flex flex-1 items-center justify-center gap-3 rounded-md border border-white/10 bg-white/5 px-5 py-4 transition hover:border-brand/40 hover:bg-white/10"
             >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand text-navy-950">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-brand text-navy-950">
                 <Icon name="phone" className="h-5 w-5" />
               </span>
               <div className="text-left">
