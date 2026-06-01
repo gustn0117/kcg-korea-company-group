@@ -1,7 +1,7 @@
 import { SectionHeading } from "../SectionHeading";
 import { Reveal } from "../Reveal";
 import { Icon } from "../Icon";
-import { services } from "@/lib/content";
+import { services, addonServices } from "@/lib/content";
 import { accentBar, accentTint, accentText } from "@/lib/accents";
 
 export function Services() {
@@ -19,7 +19,7 @@ export function Services() {
           index="02"
           eyebrow="Service Area"
           title="서비스 영역"
-          desc="데이터와 크리에이티브가 결합된 통합 디지털 마케팅 솔루션을 제공합니다."
+          desc="디지털 마케팅에 법률·세무·웹 제작까지 더한, 비즈니스 전반의 원스톱 솔루션."
         />
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -56,6 +56,42 @@ export function Services() {
               </div>
             </Reveal>
           ))}
+        </div>
+
+        {/* one-stop add-on services */}
+        <div className="mt-12">
+          <Reveal>
+            <div className="flex flex-wrap items-center gap-2.5">
+              <span className="h-2.5 w-2.5 bg-brand" />
+              <span className="font-mono text-[11px] font-medium tracking-[0.22em] text-white/55 uppercase">
+                One-stop Add-ons
+              </span>
+              <span className="text-sm font-semibold text-white/80">
+                원스톱 부가 서비스
+              </span>
+            </div>
+          </Reveal>
+
+          <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {addonServices.map((s, i) => (
+              <Reveal key={s.title} delay={i * 90}>
+                <div className="hair group relative flex h-full items-start gap-4 rounded-md border border-white/10 bg-navy-800/40 p-5 transition hover:-translate-y-1 hover:border-white/20 hover:bg-navy-800">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-brand/10 text-brand-soft">
+                    <Icon name={s.icon} className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <h4 className="font-bold text-white">{s.title}</h4>
+                    <p className="font-mono text-[10px] tracking-[0.14em] text-brand-soft/70 uppercase">
+                      {s.en}
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-white/55">
+                      {s.desc}
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

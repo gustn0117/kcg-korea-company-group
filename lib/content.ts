@@ -97,6 +97,28 @@ export const services = [
   },
 ];
 
+// 마케팅을 넘어선 원스톱 부가 서비스 (고문단 · 기술팀 역량 기반)
+export const addonServices = [
+  {
+    icon: "scale",
+    title: "법률 자문",
+    en: "Legal Advisory",
+    desc: "법무법인 은율과 연계한 계약 검토·규제 대응 및 기업 법무 지원",
+  },
+  {
+    icon: "receipt",
+    title: "세무 · 재무",
+    en: "Tax & Finance",
+    desc: "가율택스 전문 세무사와 함께하는 세무 신고·재무 전략 컨설팅",
+  },
+  {
+    icon: "code",
+    title: "홈페이지 제작",
+    en: "Web Production",
+    desc: "브랜드 아이덴티티를 담은 반응형 웹사이트·랜딩페이지 기획·개발",
+  },
+];
+
 export const whyKcg = [
   {
     no: "01",
