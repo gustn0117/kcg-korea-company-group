@@ -243,6 +243,15 @@ export type Advisor = {
 
 export const advisors: Advisor[] = [
   {
+    name: "김민규",
+    role: "법률 고문",
+    en: "Legal Advisor",
+    icon: "scale",
+    current: ["법무법인 은율 변호사", "인하대학교 공과대학원 겸임교수", "KCG(케이씨지) 법률 고문 (2025.02 ~)"],
+    expertise: ["IT / 블록체인", "금융 규제 대응", "기업 법무"],
+    roleKcg: "법률 자문 및 규제 준수(Compliance)",
+  },
+  {
     name: "류인수",
     role: "고문",
     en: "Business Strategy Advisor",
@@ -272,15 +281,6 @@ export const advisors: Advisor[] = [
     current: ["가율택스(Gayul Tax) 대표 세무사", "KCG(케이씨지) 세무 고문"],
     expertise: ["기업 세무 컨설팅", "재무 전략 수립", "세무 리스크 관리", "재무 구조 최적화"],
     roleKcg: "재무 안정성 확보 및 리스크 관리",
-  },
-  {
-    name: "김민규",
-    role: "법률 고문",
-    en: "Legal Advisor",
-    icon: "scale",
-    current: ["법무법인 은율 변호사", "인하대학교 공과대학원 겸임교수", "KCG(케이씨지) 법률 고문 (2025.02 ~)"],
-    expertise: ["IT / 블록체인", "금융 규제 대응", "기업 법무"],
-    roleKcg: "법률 자문 및 규제 준수(Compliance)",
   },
 ];
 
