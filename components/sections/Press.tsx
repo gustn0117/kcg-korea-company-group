@@ -41,14 +41,17 @@ export function Press() {
                 rel="noopener noreferrer"
                 className="hair hair-ink relative group flex h-full flex-col rounded-md border border-ink/10 bg-white p-5 shadow-soft transition hover:-translate-y-1 hover:border-brand/30 hover:shadow-card"
               >
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between gap-2">
                   <span
-                    className={`rounded-md px-2.5 py-1 text-xs font-bold ${
-                      item.category === "advisory"
-                        ? "bg-orange/10 text-orange"
+                    className={`inline-flex items-center gap-1 rounded-md px-2.5 py-1 text-xs font-bold ${
+                      item.category === "award"
+                        ? "bg-brand text-white"
                         : "bg-brand/10 text-brand"
                     }`}
                   >
+                    {item.category === "award" && (
+                      <Icon name="trophy" className="h-3 w-3" />
+                    )}
                     {item.outlet}
                   </span>
                   <span className="text-xs text-ink-soft">{fmt(item.date)}</span>

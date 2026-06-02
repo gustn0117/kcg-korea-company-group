@@ -3,11 +3,18 @@ export type PressItem = {
   outlet: string;
   date: string; // YYYY-MM-DD
   url: string;
-  category: "partnership" | "advisory";
+  category: "partnership" | "advisory" | "award";
 };
 
 // 사용자 제공 링크에서 수집한 실제 기사 제목·언론사·발행일 (최신순)
 export const pressItems: PressItem[] = [
+  {
+    title: "케이씨지(KCG) 김동인 대표, 국회 재정경제기획위원장 표창 수상",
+    outlet: "K스피릿",
+    date: "2026-06-01",
+    url: "http://www.ikoreanspirit.com/news/articleView.html?idxno=85610",
+    category: "award",
+  },
   {
     title: "케이씨지, 가율택스 서지호 대표 세무사 고문 영입… 재무·세무 역량 강화",
     outlet: "경북신문",
