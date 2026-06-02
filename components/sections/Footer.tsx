@@ -1,15 +1,15 @@
 import { Icon } from "../Icon";
-import { company, navLinks } from "@/lib/content";
+import { company, navLinks, offices } from "@/lib/content";
 
 const bizRows = [
   { label: "상호", value: "케이씨지 (KCG · 코리아컴퍼니그룹)" },
   { label: "대표", value: company.ceo },
   { label: "사업자등록번호", value: company.businessNo },
   { label: "업태 / 종목", value: `${company.bizType} / ${company.bizCategory}` },
-  {
-    label: "주소",
-    value: `${company.address} ${company.addressDetail}`,
-  },
+  ...offices.map((o) => ({
+    label: o.label,
+    value: `${o.address} ${o.detail}`,
+  })),
 ];
 
 export function Footer() {
@@ -66,6 +66,19 @@ export function Footer() {
                     className="transition hover:text-brand"
                   >
                     {company.phone}
+                  </a>
+                </dd>
+              </div>
+              <div className="flex gap-3">
+                <dt className="w-28 shrink-0 text-white/40">웹사이트</dt>
+                <dd className="text-white/70">
+                  <a
+                    href={company.websiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition hover:text-brand"
+                  >
+                    {company.website}
                   </a>
                 </dd>
               </div>

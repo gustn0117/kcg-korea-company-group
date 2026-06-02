@@ -15,11 +15,28 @@ export const company = {
   businessNo: "533-37-00826",
   bizType: "전문, 과학 및 기술서비스업",
   bizCategory: "광고 대행업",
-  address: "경상북도 구미시 모로실로 32-1, 103동 1603호",
-  addressDetail: "(상모동, e편한세상 구미상모 트리베뉴)",
+  address: "경상북도 구미시 모로실로 32-1",
+  addressDetail: "(상모동) e편한세상 트리베뉴 103동",
   email: "arnoldpalmer@naver.com",
   phone: "010-9000-4881",
+  website: "www.kcgkorea.com",
+  websiteUrl: "https://www.kcgkorea.com",
 };
+
+export const offices = [
+  {
+    label: "본사",
+    en: "Headquarters",
+    address: "경상북도 구미시 모로실로 32-1",
+    detail: "(상모동) e편한세상 트리베뉴 103동",
+  },
+  {
+    label: "서울지점",
+    en: "Seoul Office",
+    address: "서울특별시 송파구 위례광장로 121",
+    detail: "송파꿈에그린위례 24단지 2417동",
+  },
+];
 
 export const navLinks = [
   { id: "about", label: "회사 개요" },
@@ -186,6 +203,17 @@ export const operations = [
   { icon: "headphones", title: "실시간 소통 채널", desc: "카카오톡/슬랙 등을 통한 즉각적인 피드백" },
   { icon: "zap", title: "빠른 의사결정", desc: "시장 변화에 따른 유연하고 신속한 전략 수정" },
 ];
+
+export const ceoProfile = {
+  name: "김동인",
+  role: "대표이사",
+  en: "Chief Executive Officer",
+  message: [
+    "KCG 코리아컴퍼니그룹은 2017년 출발 이래 ‘성과로 증명한다’는 단 하나의 원칙으로 파트너사와 함께 성장해 왔습니다.",
+    "화려한 약속보다 정직한 데이터와 끈질긴 실행을 믿습니다. 고객의 성장을 곧 우리의 성공으로 여기며, 그 약속을 지키는 파트너가 되겠습니다.",
+  ],
+  focus: ["성과 중심 경영", "장기 파트너십", "통합 마케팅 전략"],
+};
 
 export const cmo = {
   name: "장하리",

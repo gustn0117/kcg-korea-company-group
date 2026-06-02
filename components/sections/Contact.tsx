@@ -1,6 +1,6 @@
 import { Reveal } from "../Reveal";
 import { Icon } from "../Icon";
-import { company } from "@/lib/content";
+import { company, offices } from "@/lib/content";
 
 export function Contact() {
   return (
@@ -30,7 +30,7 @@ export function Contact() {
             <br className="hidden sm:block" /> 지금 제안을 문의해 주세요.
           </p>
 
-          <div className="mx-auto mt-9 flex max-w-xl flex-col gap-3 sm:flex-row">
+          <div className="mx-auto mt-9 flex max-w-3xl flex-col gap-3 sm:flex-row">
             <a
               href={`mailto:${company.email}`}
               className="hair group relative flex flex-1 items-center justify-center gap-3 rounded-md border border-white/10 bg-white/5 px-5 py-4 transition hover:border-brand/40 hover:bg-white/10"
@@ -55,6 +55,43 @@ export function Contact() {
                 <div className="font-semibold text-white">{company.phone}</div>
               </div>
             </a>
+            <a
+              href={company.websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hair group relative flex flex-1 items-center justify-center gap-3 rounded-md border border-white/10 bg-white/5 px-5 py-4 transition hover:border-brand/40 hover:bg-white/10"
+            >
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-brand text-navy-950">
+                <Icon name="external-link" className="h-5 w-5" />
+              </span>
+              <div className="text-left">
+                <div className="text-xs text-white/50">웹사이트</div>
+                <div className="font-semibold text-white">{company.website}</div>
+              </div>
+            </a>
+          </div>
+
+          {/* offices */}
+          <div className="mx-auto mt-5 flex max-w-3xl flex-col gap-3 sm:flex-row">
+            {offices.map((o) => (
+              <div
+                key={o.label}
+                className="flex flex-1 items-start gap-2.5 rounded-md border border-white/8 bg-white/3 px-4 py-3 text-left"
+              >
+                <Icon
+                  name="map-pin"
+                  className="mt-0.5 h-4 w-4 shrink-0 text-brand-soft"
+                />
+                <div>
+                  <div className="font-mono text-[10px] tracking-[0.14em] text-brand-soft/80 uppercase">
+                    {o.label} · {o.en}
+                  </div>
+                  <div className="mt-0.5 text-sm text-white/60">
+                    {o.address} {o.detail}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </Reveal>
       </div>

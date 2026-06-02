@@ -1,7 +1,7 @@
 import { SectionHeading } from "../SectionHeading";
 import { Reveal } from "../Reveal";
 import { Icon } from "../Icon";
-import { cmo, advisors, type Advisor } from "@/lib/content";
+import { ceoProfile, cmo, advisors, type Advisor } from "@/lib/content";
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
@@ -97,6 +97,67 @@ export function Leadership() {
           title="임원진 & 고문단"
           desc="최고의 전문가들과 함께 마케팅의 새로운 기준을 제시합니다."
         />
+
+        {/* CEO greeting */}
+        <Reveal>
+          <div className="hair hair-ink relative mt-10 overflow-hidden rounded-md border border-ink/10 bg-white p-7 shadow-soft sm:p-9">
+            <div className="pointer-events-none absolute -top-16 -right-16 h-48 w-48 rounded-full bg-brand/5 blur-2xl" />
+            <span className="text-outline-ink pointer-events-none absolute -bottom-6 right-4 hidden text-[7rem] font-black leading-none tracking-tighter select-none sm:block">
+              CEO
+            </span>
+            <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+              <div>
+                <div className="flex items-center gap-2.5 text-brand">
+                  <span className="h-2.5 w-2.5 bg-brand" />
+                  <span className="font-mono text-[11px] font-medium tracking-[0.22em] uppercase">
+                    Message from CEO
+                  </span>
+                </div>
+                <div className="mt-5 flex items-center gap-5">
+                  <div className="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center rounded-md bg-navy-900 text-2xl font-black text-white shadow-[0_10px_30px_-12px_rgba(84,131,200,0.7)]">
+                    김
+                  </div>
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2.5">
+                      <h3 className="text-[1.7rem] font-black text-ink">
+                        {ceoProfile.name}
+                      </h3>
+                      <span className="rounded-md bg-brand/10 px-2.5 py-1 text-xs font-bold text-brand">
+                        {ceoProfile.role}
+                      </span>
+                    </div>
+                    <p className="mt-1 font-mono text-[11px] tracking-[0.14em] text-brand/80 uppercase">
+                      {ceoProfile.en}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-6 flex flex-wrap gap-1.5">
+                  {ceoProfile.focus.map((f) => (
+                    <span
+                      key={f}
+                      className="rounded-md bg-ink/5 px-2.5 py-1 text-xs font-medium text-ink-soft"
+                    >
+                      {f}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="relative">
+                <Icon name="quote" className="h-7 w-7 text-brand/25" />
+                <div className="mt-3 space-y-4 text-[15px] leading-relaxed text-ink-soft">
+                  {ceoProfile.message.map((m, i) => (
+                    <p key={i}>{m}</p>
+                  ))}
+                </div>
+                <div className="mt-6 flex items-center justify-end gap-2 text-sm">
+                  <span className="text-ink-soft">코리아컴퍼니그룹 대표이사</span>
+                  <span className="font-bold text-ink">{ceoProfile.name}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Reveal>
 
         <Reveal>
           <div className="hair hair-ink relative mt-10 overflow-hidden rounded-md border border-orange/20 bg-linear-to-br from-white to-orange/5 p-7 shadow-soft sm:p-9">
